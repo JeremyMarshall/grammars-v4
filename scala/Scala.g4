@@ -441,7 +441,7 @@ typeDef
 
 tmplDef
    : 'case'? 'class' classDef
-   | 'case' 'object' objectDef
+   | 'case'? 'object' objectDef
    | 'trait' traitDef
    ;
 
@@ -611,7 +611,8 @@ fragment WhiteSpace
 
 
 fragment Opchar
-   : PrintableChar
+   : [+-=]
+//   : PrintableChar
    ;
 
 
